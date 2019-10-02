@@ -100,4 +100,48 @@ function DivideConquer(arr, val){
     return false;
 }
 DivideConquer([1,2,3,4,5,6,7,8,9,10], -1)
+
+
+// You will be given a numerical array that has first been sorted, then rotated
+// by an unknown amount. Find and return the minimum value in that array. Don’t
+// use built-in functions (surprise!). Given the input array ["Gigli","Jay is
+// cool","Mavis","Phoebe","Thurber","Anna","Celeste","Elon"] , you should return
+// "Anna" . Remember, do not linearly iterate the array!
+
+
+// function minOfSortedRotation(arr) {
+    //     var min = arr[0];
+    //     for(var i = 0; i < arr.length; i++) {
+        //         if(arr[i] < min) {
+            //             min = arr[i];
+            //         }
+            //     }
+            //     return min;
+            // }
+            
+            // console.log(minOfSortedRotation(arr));
+            
+
+arr = ["Gigli","Jay is cool","Mavis","Phoebe","Thurber","Anna","Celeste","Elon"];
+//arr = ["Celeste","Elon","Gigli","Jay is cool","Mavis","Phoebe","Thurber", "Anna"];
+function minOfSortedRotation2(arr) {
+    var front = 0;
+    var back = arr.length - 1;
+    while(back - front > 1){
+        var mid = Math.floor((back+front)/2);
+        if(arr[mid] > arr[front]) {
+            front = mid;
+        } else {
+            back = mid;
+        }
+    }
+    console.log(front);
+    console.log(back);
+    return arr[back];
+}
+
+// console.log(arr[3] > arr[5]);
+
+console.log(minOfSortedRotation2(arr));
+
         
