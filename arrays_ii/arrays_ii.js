@@ -145,3 +145,29 @@ function minOfSortedRotation2(arr) {
 console.log(minOfSortedRotation2(arr));
 
         
+
+//Flatten a given array, eliminating nested & empty arrays. 
+//Do not alter it; return a new one retaining order. 
+//For [1,[2,3],4,[]] return [1,2,3,4] . 
+//Second: work ‘in-place’ in the given array (do not create another). Alter order if needed. Ex.: [1,[2,3],4,[]] could become [1,3,4,2] . 
+//Third: make your algorithm both in-place and stable . Do you need a return value? 
+
+function flatten(arr) {
+    var result = [];
+    for(var i=0; i< arr.length; i++) {
+        var currentValue= arr[i]; //result = result.concat(flatten(arr[i]));
+        if(Array.isArray(currentValue)) {
+           console.log(currentValue);
+           for(var j=0; j<currentValue.length; j++) {
+                result.push(currentValue[j]);
+           }
+        } else {
+            result.push(currentValue);
+        }              
+    }
+    return result;
+}
+
+console.log(flatten([1,[2,3],4,[]]));
+
+        
