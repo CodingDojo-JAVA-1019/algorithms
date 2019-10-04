@@ -111,6 +111,14 @@ class Tree {
             }
         }
     }
+
+    size(){
+        if(this.isEmpty()){
+            return 0;
+        }
+        this.root.size()
+    }
+    
 }
 class Node {
     constructor(value) {
@@ -118,9 +126,18 @@ class Node {
         this.left = null;
         this.right = null;
     }
-    add(value) {
-
-
+    size(){
+        var intsize = 1;
+            
+            if(this.left != null){
+                intsize += this.left.size();
+            }
+            if(this.right != null){
+                intsize += this.right.size();
+            }
+        
+        return intsize;
+    
     }
 }
 const tree = new Tree();
