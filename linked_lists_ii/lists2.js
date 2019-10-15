@@ -91,12 +91,11 @@ class List{
         }
         return null;
     }
-
     returnVal(val){
         var runner = this.head;
         var follower = this.head;
         var count = 0;
-        while(runner && val > 0){
+        while(runner && val > 0){ //&& = as well as
             count++;
             val--;
             runner=runner.next;
