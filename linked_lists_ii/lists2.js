@@ -110,14 +110,50 @@ class List{
         return follower.value;
         
     }
+    isPalindrome(){
+        var runner = this.head;
+        var temparr =[];
+        while(runner){
+            temparr.push(runner.value);
+            runner=runner.next;
+        }
+        for(var i=0; i<temparr.length/2; i++){
+            if( temparr[i] != temparr[temparr.length-1-i]){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    isPalindrome2(){
+        var count =0;
+        var runner=this.head;
+        while(runner){
+            count ++;
+            var compare = this.lastNode(count);
+            if(runner.value != compare){
+                return false;
+            }
+            runner =runner.next;
+        }
+        return true;
+    }
 }
 var list = new List();
-list.add(1);
-list.add(2);
-list.add(3);
-list.addToBack(4);
+'racecar'.split('').forEach(char => list.addToBack(char));
+
+
+// list.addToBack(1);
+// list.addToBack(2);
+// list.addToBack(3);
+// list.addToBack(4);
+// list.addToBack(5);
+// list.addToBack(4);
+// list.addToBack(3);
+// list.addToBack(2);
+// list.addToBack(1);
 
 // console.log(list.contains(4));
 // console.log(list.reverse2());
-console.log("getlastwhooop!",list.lastNode(2));
-console.log("Here is 2nd one", list.returnVal(1));
+// console.log("getlastwhooop!",list.lastNode(2));
+console.log("Here palindrome 2 is", list.isPalindrome2());
