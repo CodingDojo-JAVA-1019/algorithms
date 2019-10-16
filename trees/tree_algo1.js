@@ -5,11 +5,7 @@ class Tree {
 
     add(value) {
         const node = new Node(value)
-<<<<<<< HEAD
-        if( this.isEmpty() ){
-=======
         if (this.isEmpty()) {
->>>>>>> 0b2eac3957ef4047b5f16a2e4eabd5ea3c83c941
             this.root = new Node(value);
         } else {
             var runner = this.root;
@@ -59,23 +55,6 @@ class Tree {
     }
 
     max() {
-<<<<<<< HEAD
-    if (this.isEmpty()) {
-        return null;
-    }
-
-    var runner = this.root;
-    while(runner.right) {
-        runner = runner.right;
-    }
-
-    return runner.value;
-
-    }
-
-    isEmpty(){
-        return  this.root === null;
-=======
         if (this.isEmpty()) {
             return null;
         }
@@ -91,7 +70,6 @@ class Tree {
 
     isEmpty() {
         return this.root === null;
->>>>>>> 0b2eac3957ef4047b5f16a2e4eabd5ea3c83c941
 
     }
 
@@ -101,63 +79,6 @@ class Tree {
         }
         var count = 0
         var runner = this.root;
-<<<<<<< HEAD
-        while(runner.right) {
-            runner = runner.right;
-            count+=1
-        }
-    
-        return count;
-    
-        }
-
-    balanced() {
-        if (this.isEmpty()) {
-            return null;
-        }
-        var balanced = false;
-        var countright = 0;
-        var countleft = 0;
-        var runner = this.root;
-        while(runner.right) {
-            runner = runner.right;
-            countright+=1
-        }
-        while(runner.left) {
-            runner = runner.left;
-            countleft+=1
-        }
-        if(countleft - countright >= 1){
-            balanced = true;
-        }
-        
-    
-        }
-    contains(val){
-        if(this.isEmpty()){
-            return false;
-        }
-        var runner = this.root;
-            while(runner){
-                if(runner.value == val){
-                    return true;
-                }
-
-                if(val < runner.value){
-                    if(!runner.left){
-                        return false;
-                    }
-                    runner = runner.left;
-                }
-                else{
-                    if(!runner.right){
-                        return false;
-                    }
-                    runner = runner.right;
-                }
-        }
-    }
-=======
         while (runner.right) {
             runner = runner.right;
             count += 1
@@ -198,7 +119,6 @@ class Tree {
         this.root.size()
     }
     
->>>>>>> 0b2eac3957ef4047b5f16a2e4eabd5ea3c83c941
 }
 class Node {
     constructor(value) {

@@ -139,7 +139,12 @@ class List{
         }
         return true;
     }
+
+  
 }
+
+
+
 var list = new List();
 'racecar'.split('').forEach(char => list.addToBack(char));
 
