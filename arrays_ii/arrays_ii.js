@@ -69,23 +69,23 @@
 
 // /////////////////////////
 
-// function DivideConquer(arr, val){
-//     var front =0;
-//     var back = arr.length-1;
-//     var count =0;
-//     while(front<back){
-//         var mid = Math.floor((back+front)/2);
-//         if(val == mid){
-//             return true;
-//         }
-//         if ( val < arr[mid]){
-//             back = mid;
-//         }else{
-//             front=mid+1;
-//         }
-//     }
-//     return false;
-// }
+function DivideConquer(arr, val){
+    var front =0;
+    var back = arr.length-1;
+    var count =0;
+    while(front<back){
+        var mid = Math.floor((back+front)/2);
+        if(val == mid){
+            return true;
+        }
+        if ( val < arr[mid]){
+            back = mid;
+        }else{
+            front=mid+1;
+        }
+    }
+    return false;
+}
 // DivideConquer([1,2,3,4,5,6,7,8,9,10], -1)
 
 

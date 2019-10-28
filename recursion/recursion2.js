@@ -51,4 +51,29 @@ var canvas = [
     [6,5,3,4,1], 
     [1,2,3,3,3],
     ];
-console.log(floodFill(canvas, [2,2], 9))
+// console.log(floodFill(canvas, [2,2], 9))
+
+// Write rFib(num) . Recursively compute and return num th Fibonacci value. As earlier, treat first two (num = 0, num = 1) Fibonacci vals as 0 and 1. Examples: rFib(2) = 1 (0+1); rFib(3) = 2 (1+1); rFib(4) = 3 (1+2); rFib(5) = 5 (2+3). rFib(3.65) = rFib(3) = 2 , rFib(-2) = rFib(0) =
+
+// 0 . 
+
+function rFib(val){
+    var realNum =Math.floor(val);
+    if(val<=0){
+        return 1;
+    }else{
+        return 1+ rFib(realNum-1);
+    }
+}
+
+// console.log(rFib(3));
+
+//  You are given a string containing chars ‘ 0 ’, ‘ 1 ’, and ‘ ? ’. For every ‘ ? ’, either ‘ 0 ’or ‘ 1 ’ can be substituted. Write a recursive function to return array of all valid strings with ‘ ? ’ chars expanded to ‘ 0 ’or ‘ 1 ’. binStrExpand("1?0?") => ["1000","1001","1100","1101"] . If you use string functions such as slice() , use them sparingly, as they are expensive. 
+
+function bStringExpansion(str){
+    var newString=str.split("?");
+    console.log (newString);
+
+    
+}
+bStringExpansion("10?1")
